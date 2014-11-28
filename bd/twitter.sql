@@ -1,17 +1,3 @@
--- usuarios
---id
---nick
---password
-
-
---timeline
-
-
---tuit
---id
---mensaje
---hora
---usuario_id
 
 drop table usuarios cascade;
 
@@ -22,11 +8,9 @@ create table usuarios (
 );
 
 insert into usuarios (nick, password)
-values (0, 'USUARIO FICTICIO', kk);
-insert into usuarios (id, nick, password)
-values ('Pepe', pepe);
-insert into usuarios ((id, nick, password)
-values ('Juan', juan);
+values ('Pepe', md5('pepe'));
+insert into usuarios (nick, password)
+values ('Juan', md5('juan'));
 
 drop table tuits cascade;
 
